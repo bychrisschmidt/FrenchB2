@@ -472,11 +472,18 @@ if (!fbEnabled) {
 
   signInBtn.onclick = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithRedirect(provider);
+    authStatus.textContent = "Redirecting to Google…";
+    auth.signInWithRedirect(provider).catch(err => {
+      console.error('Sign-in error:', err);
+      authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
+    });
   };
   signOutBtn.onclick = () => auth.signOut();
 
-  auth.getRedirectResult().catch(err => console.error('Sign-in error:', err));
+  auth.getRedirectResult().catch(err => {
+    console.error('Sign-in error:', err);
+    authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
+  });
 
   auth.onAuthStateChanged(user => {
     currentUser = user;
