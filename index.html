@@ -472,10 +472,23 @@ if (!fbEnabled) {
 
   signInBtn.onclick = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    authStatus.textContent = "Redirecting to Google…";
-    auth.signInWithRedirect(provider).catch(err => {
-      console.error('Sign-in error:', err);
-      authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
+    authStatus.textContent = "Opening Google sign-in…";
+    auth.signInWithPopup(provider).catch(err => {
+      console.error('Popup sign-in error:', err);
+      const fallbackCodes = [
+        'auth/popup-blocked',
+        'auth/cancelled-popup-request',
+        'auth/operation-not-supported-in-this-environment'
+      ];
+      if (fallbackCodes.includes(err.code)) {
+        authStatus.textContent = "Popup blocked — redirecting to Google instead…";
+        auth.signInWithRedirect(provider).catch(err2 => {
+          console.error('Redirect sign-in error:', err2);
+          authStatus.textContent = `Sign-in failed: ${err2.code || err2.message}`;
+        });
+      } else {
+        authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
+      }
     });
   };
   signOutBtn.onclick = () => auth.signOut();
