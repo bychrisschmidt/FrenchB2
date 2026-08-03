@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>French 5-Week Program — Post-202</title>
+<title>Programme de français sur 5 semaines — Post-202</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta name="theme-color" content="#1e3a5f">
@@ -95,15 +95,15 @@
 <body>
 
 <header>
-  <h1>French Program — Post En Avant 202</h1>
-  <p>5 weeks · ~8 hrs/week · Grammar · InnerFrench · Nouvelle Vague · Literature & Poetry</p>
+  <h1>Programme de français — Après En Avant 202</h1>
+  <p>5 semaines · ~8 h/semaine · Grammaire · InnerFrench · Nouvelle Vague · Littérature et poésie</p>
 </header>
 
 <div class="authbar">
-  <span id="authStatus">Checking sign-in…</span>
+  <span id="authStatus">Vérification de la connexion…</span>
   <span>
-    <button id="signInBtn" style="display:none;">Sign in with Google</button>
-    <button id="signOutBtn" class="secondary" style="display:none;">Sign out</button>
+    <button id="signInBtn" style="display:none;">Se connecter avec Google</button>
+    <button id="signOutBtn" class="secondary" style="display:none;">Se déconnecter</button>
   </span>
 </div>
 
@@ -124,13 +124,12 @@
    by Firestore security rules, not by hiding this object.
    ========================================================================= */
 const firebaseConfig = {
-  apiKey: "AIzaSyDJmrtYM6dt-nP1PX5zCML0iIOVfjZMLpQ",
-  authDomain: "frenchb2.firebaseapp.com",
-  projectId: "frenchb2",
-  storageBucket: "frenchb2.firebasestorage.app",
-  messagingSenderId: "394840996420",
-  appId: "1:394840996420:web:d1e8526c663791047b9a11",
-  measurementId: "G-QQW3C57TEX"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 let fbEnabled = firebaseConfig.apiKey !== "YOUR_API_KEY";
@@ -153,168 +152,168 @@ if ('serviceWorker' in navigator) {
 const DATA = {
   weeks: [
     {
-      title: "Week 1",
-      theme: "Consolidation & Diagnostic",
+      title: "Semaine 1",
+      theme: "Consolidation et diagnostic",
       blocks: [
-        { h: "Grammar", badge: "review", items: [
-          "Review passé composé vs. imparfait vs. plus-que-parfait (Kwiziq or Lawless French)",
-          "Review subjunctive triggers: emotion, doubt, necessity, wish"
+        { h: "Grammaire", badge: "révision", items: [
+          "Réviser le passé composé, l'imparfait et le plus-que-parfait (Kwiziq ou Lawless French)",
+          "Réviser les déclencheurs du subjonctif : émotion, doute, nécessité, souhait"
         ]},
-        { h: "Vocabulary", badge: "Anki", items: [
-          "Build a 300-word Anki deck from your weakest En Avant ch. 13–16 material",
-          "10 min/day review"
+        { h: "Vocabulaire", badge: "Anki", items: [
+          "Créer un paquet Anki de 300 mots à partir de vos points faibles des chapitres 13 à 16 d'En Avant",
+          "10 min de révision par jour"
         ]},
-        { h: "InnerFrench (podcast spine)", badge: "listening", items: [
-          "Listen to an intro/culture episode — this podcast is your weekly listening core going forward",
-          "Shadow (repeat aloud after) one 5-min segment daily",
-          "<a href='https://innerfrench.com' target='_blank'>innerfrench.com — browse episode list</a>"
+        { h: "InnerFrench (podcast principal)", badge: "écoute", items: [
+          "Écouter un épisode d'introduction/culture — ce podcast sera votre pilier d'écoute hebdomadaire pour la suite",
+          "Faire du shadowing (répéter à voix haute) sur un segment de 5 minutes chaque jour",
+          "<a href='https://innerfrench.com' target='_blank'>innerfrench.com — parcourir la liste des épisodes</a>"
         ]},
-        { h: "Nouvelle Vague film", badge: "cinema", items: [
-          "Watch <em>Les Quatre Cents Coups</em> (Truffaut, 1959) — accessible dialogue, coming-of-age story",
-          "<a href='https://en.wikipedia.org/wiki/The_400_Blows' target='_blank'>background reading (Wikipedia)</a>",
-          "Note 10 new expressions from the dialogue"
+        { h: "Film de la Nouvelle Vague", badge: "cinéma", items: [
+          "Regarder <em>Les Quatre Cents Coups</em> (Truffaut, 1959) — dialogues accessibles, récit d'apprentissage",
+          "<a href='https://en.wikipedia.org/wiki/The_400_Blows' target='_blank'>lecture de contexte (Wikipédia)</a>",
+          "Noter 10 nouvelles expressions tirées des dialogues"
         ]},
-        { h: "Literature & Poetry", badge: "reading", items: [
-          "Jacques Prévert, <em>Paroles</em> — read 'Déjeuner du matin' and 'Barbara' (short, conversational syntax — a gentle way into French poetry)",
-          "Start a graded reader in parallel (e.g. <em>Le Petit Nicolas</em>)"
+        { h: "Littérature et poésie", badge: "lecture", items: [
+          "Jacques Prévert, <em>Paroles</em> — lire « Déjeuner du matin » et « Barbara » (syntaxe courte et conversationnelle — une entrée en douceur dans la poésie française)",
+          "Commencer en parallèle un livre gradué (par ex. <em>Le Petit Nicolas</em>)"
         ]},
-        { h: "Speaking & Writing", badge: "output", items: [
-          "Daily 5-sentence journal in French",
-          "End-of-week: short self-assessment paragraph (this is your baseline for Week 5)"
+        { h: "Expression orale et écrite", badge: "production", items: [
+          "Tenir un journal quotidien de 5 phrases en français",
+          "Fin de semaine : court paragraphe d'auto-évaluation (ce sera votre référence pour la semaine 5)"
         ]}
       ]
     },
     {
-      title: "Week 2",
-      theme: "Subjunctive, Conditional, Si-clauses",
+      title: "Semaine 2",
+      theme: "Subjonctif, conditionnel, phrases avec si",
       blocks: [
-        { h: "Grammar", badge: "core", items: [
-          "All three conditional / si-clause types",
-          "Subjunctive after emotion, doubt, opinion",
-          "Relative pronouns: dont, lequel, ce qui / ce que"
+        { h: "Grammaire", badge: "essentiel", items: [
+          "Les trois types de phrases conditionnelles avec si",
+          "Le subjonctif après l'émotion, le doute, l'opinion",
+          "Les pronoms relatifs : dont, lequel, ce qui / ce que"
         ]},
-        { h: "Vocabulary", badge: "Anki", items: [
-          "200 words: opinion & debate vocabulary"
+        { h: "Vocabulaire", badge: "Anki", items: [
+          "200 mots : vocabulaire de l'opinion et du débat"
         ]},
-        { h: "InnerFrench", badge: "listening", items: [
-          "Listen to a société/opinion episode — connects to this week's grammar (expressing opinions)",
-          "Shadow one segment daily"
+        { h: "InnerFrench", badge: "écoute", items: [
+          "Écouter un épisode société/opinion — en lien avec la grammaire de la semaine (exprimer une opinion)",
+          "Faire du shadowing sur un segment chaque jour"
         ]},
-        { h: "Nouvelle Vague film", badge: "cinema", items: [
-          "Watch <em>À bout de souffle</em> (Godard, 1960) — iconic jump cuts, colloquial register",
-          "<a href='https://en.wikipedia.org/wiki/Breathless_(1960_film)' target='_blank'>background reading (Wikipedia)</a>",
-          "Note how characters use informal register — ties into Week 4"
+        { h: "Film de la Nouvelle Vague", badge: "cinéma", items: [
+          "Regarder <em>À bout de souffle</em> (Godard, 1960) — jump cuts emblématiques, registre familier",
+          "<a href='https://en.wikipedia.org/wiki/Breathless_(1960_film)' target='_blank'>lecture de contexte (Wikipédia)</a>",
+          "Observer comment les personnages utilisent le registre familier — lien avec la semaine 4"
         ]},
-        { h: "Literature & Poetry", badge: "reading", items: [
-          "Albert Camus, <em>L'Étranger</em> — read the opening pages ('Aujourd'hui, maman est morte...') for tone and register",
-          "Continue graded reader"
+        { h: "Littérature et poésie", badge: "lecture", items: [
+          "Albert Camus, <em>L'Étranger</em> — lire les premières pages (« Aujourd'hui, maman est morte... ») pour le ton et le registre",
+          "Poursuivre le livre gradué"
         ]},
-        { h: "Speaking & Writing", badge: "output", items: [
-          "Two 20-min iTalki or Tandem conversations",
-          "Write two opinion paragraphs using subjunctive/conditional structures"
+        { h: "Expression orale et écrite", badge: "production", items: [
+          "Deux conversations de 20 minutes sur iTalki ou Tandem",
+          "Écrire deux paragraphes d'opinion en utilisant des structures au subjonctif/conditionnel"
         ]}
       ]
     },
     {
-      title: "Week 3",
-      theme: "Narrative Writing & Complex Tenses",
+      title: "Semaine 3",
+      theme: "Écriture narrative et temps complexes",
       blocks: [
-        { h: "Grammar", badge: "core", items: [
-          "Plus-que-parfait and futur antérieur",
-          "Passé simple — recognition only, for reading literary texts",
-          "Gerund: en + present participle"
+        { h: "Grammaire", badge: "essentiel", items: [
+          "Le plus-que-parfait et le futur antérieur",
+          "Le passé simple — reconnaissance seulement, pour la lecture de textes littéraires",
+          "Le gérondif : en + participe présent"
         ]},
-        { h: "Vocabulary", badge: "Anki", items: [
-          "Narrative connectors: d'abord, ensuite, par la suite, finalement"
+        { h: "Vocabulaire", badge: "Anki", items: [
+          "Les connecteurs narratifs : d'abord, ensuite, par la suite, finalement"
         ]},
-        { h: "InnerFrench", badge: "listening", items: [
-          "Listen to a French history episode — matches this week's narrative/passé simple focus"
+        { h: "InnerFrench", badge: "écoute", items: [
+          "Écouter un épisode sur l'histoire de France — en lien avec le récit et le passé simple de la semaine"
         ]},
-        { h: "Nouvelle Vague film", badge: "cinema", items: [
-          "Watch <em>Cléo de 5 à 7</em> (Varda, 1962) — real-time narrative structure, useful for discussing tense and sequencing",
-          "<a href='https://en.wikipedia.org/wiki/Cl%C3%A9o_from_5_to_7' target='_blank'>background reading (Wikipedia)</a>"
+        { h: "Film de la Nouvelle Vague", badge: "cinéma", items: [
+          "Regarder <em>Cléo de 5 à 7</em> (Varda, 1962) — structure narrative en temps réel, utile pour discuter des temps et de la chronologie",
+          "<a href='https://en.wikipedia.org/wiki/Cl%C3%A9o_from_5_to_7' target='_blank'>lecture de contexte (Wikipédia)</a>"
         ]},
-        { h: "Literature & Poetry", badge: "reading", items: [
-          "Charles Baudelaire, <em>Les Fleurs du mal</em> — 'L'Albatros' and 'Correspondances'",
-          "<a href='https://fr.wikisource.org/wiki/Les_Fleurs_du_mal' target='_blank'>full public-domain text on Wikisource</a>",
-          "Guy de Maupassant, a short story (e.g. 'La Parure')"
+        { h: "Littérature et poésie", badge: "lecture", items: [
+          "Charles Baudelaire, <em>Les Fleurs du mal</em> — « L'Albatros » et « Correspondances »",
+          "<a href='https://fr.wikisource.org/wiki/Les_Fleurs_du_mal' target='_blank'>texte intégral du domaine public sur Wikisource</a>",
+          "Guy de Maupassant, une nouvelle (par ex. « La Parure »)"
         ]},
-        { h: "Speaking & Writing", badge: "output", items: [
-          "Two conversations focused on narrating past events",
-          "Write a one-page past-tense narrative essay"
+        { h: "Expression orale et écrite", badge: "production", items: [
+          "Deux conversations centrées sur le récit d'événements passés",
+          "Écrire un récit d'une page au passé"
         ]}
       ]
     },
     {
-      title: "Week 4",
-      theme: "Register & Francophonie",
+      title: "Semaine 4",
+      theme: "Registre et francophonie",
       blocks: [
-        { h: "Grammar", badge: "core", items: [
-          "Formal vs. informal register: tu/vous, subjunctive nuance",
-          "Negation nuances: ne...que, ne...guère"
+        { h: "Grammaire", badge: "essentiel", items: [
+          "Registre formel et informel : tu/vous, nuances du subjonctif",
+          "Nuances de la négation : ne...que, ne...guère"
         ]},
-        { h: "Vocabulary", badge: "Anki", items: [
-          "Regional terms: Quebec, West Africa, Belgium"
+        { h: "Vocabulaire", badge: "Anki", items: [
+          "Termes régionaux : Québec, Afrique de l'Ouest, Belgique"
         ]},
-        { h: "InnerFrench", badge: "listening", items: [
-          "Listen to an episode specifically about a francophone country outside France"
+        { h: "InnerFrench", badge: "écoute", items: [
+          "Écouter un épisode consacré à un pays francophone hors de France"
         ]},
-        { h: "Nouvelle Vague film", badge: "cinema", items: [
-          "Watch <em>Jules et Jim</em> (Truffaut, 1962) — complex relationships, register shifts in dialogue",
-          "<a href='https://en.wikipedia.org/wiki/Jules_and_Jim' target='_blank'>background reading (Wikipedia)</a>"
+        { h: "Film de la Nouvelle Vague", badge: "cinéma", items: [
+          "Regarder <em>Jules et Jim</em> (Truffaut, 1962) — relations complexes, changements de registre dans les dialogues",
+          "<a href='https://en.wikipedia.org/wiki/Jules_and_Jim' target='_blank'>lecture de contexte (Wikipédia)</a>"
         ]},
-        { h: "Literature & Poetry", badge: "reading", items: [
-          "Arthur Rimbaud, 'Le Dormeur du val' — pairs history/war themes with this week's cultural focus",
-          "<a href='https://fr.wikisource.org/wiki/Le_Dormeur_du_val' target='_blank'>full public-domain text on Wikisource</a>",
-          "Read one article comparing francophone regions (RFI or TV5Monde)"
+        { h: "Littérature et poésie", badge: "lecture", items: [
+          "Arthur Rimbaud, « Le Dormeur du val » — associe les thèmes de l'histoire et de la guerre au focus culturel de la semaine",
+          "<a href='https://fr.wikisource.org/wiki/Le_Dormeur_du_val' target='_blank'>texte intégral du domaine public sur Wikisource</a>",
+          "Lire un article comparant des régions francophones (RFI ou TV5Monde)"
         ]},
-        { h: "Speaking & Writing", badge: "output", items: [
-          "Two conversations on cultural topics — practice switching register mid-conversation",
-          "Write a formal email and an informal text exchange side by side"
+        { h: "Expression orale et écrite", badge: "production", items: [
+          "Deux conversations sur des sujets culturels — s'entraîner à changer de registre en cours de conversation",
+          "Écrire un e-mail formel et un échange de textos informel, côte à côte"
         ]}
       ]
     },
     {
-      title: "Week 5",
-      theme: "Integration & Capstone",
+      title: "Semaine 5",
+      theme: "Intégration et projet final",
       blocks: [
-        { h: "Grammar", badge: "review", items: [
-          "Cumulative review quiz covering weeks 1–4"
+        { h: "Grammaire", badge: "révision", items: [
+          "Quiz de révision cumulatif couvrant les semaines 1 à 4"
         ]},
-        { h: "Vocabulary", badge: "Anki", items: [
-          "Full review of all decks — target 90% retention"
+        { h: "Vocabulaire", badge: "Anki", items: [
+          "Révision complète de tous les paquets — objectif 90 % de rétention"
         ]},
-        { h: "InnerFrench", badge: "listening", items: [
-          "Listen to one full advanced episode, then self-quiz your comprehension without the transcript"
+        { h: "InnerFrench", badge: "écoute", items: [
+          "Écouter un épisode avancé en entier, puis évaluer sa compréhension sans la transcription"
         ]},
-        { h: "Nouvelle Vague film", badge: "cinema", items: [
-          "Watch <em>Hiroshima mon amour</em> (Resnais, 1959) — capstone: non-linear narrative, memory, time — ties the course together",
-          "<a href='https://en.wikipedia.org/wiki/Hiroshima_mon_amour' target='_blank'>background reading (Wikipedia)</a>"
+        { h: "Film de la Nouvelle Vague", badge: "cinéma", items: [
+          "Regarder <em>Hiroshima mon amour</em> (Resnais, 1959) — bouquet final : récit non linéaire, mémoire, temps — relie l'ensemble du programme",
+          "<a href='https://en.wikipedia.org/wiki/Hiroshima_mon_amour' target='_blank'>lecture de contexte (Wikipédia)</a>"
         ]},
-        { h: "Literature & Poetry", badge: "reading", items: [
-          "Capstone recitation: choose your favorite poem from weeks 1–4 (Prévert, Baudelaire, or Rimbaud), memorize a stanza, and recite/analyze it aloud",
-          "Finish your graded reader/short story collection and write a one-paragraph summary"
+        { h: "Littérature et poésie", badge: "lecture", items: [
+          "Récitation finale : choisir son poème préféré parmi les semaines 1 à 4 (Prévert, Baudelaire ou Rimbaud), mémoriser une strophe et la réciter/analyser à voix haute",
+          "Terminer son livre gradué/recueil de nouvelles et rédiger un résumé d'un paragraphe"
         ]},
-        { h: "Speaking & Writing", badge: "output", items: [
-          "30-min mock oral exam (record solo or with a partner): describe an experience, give an opinion, narrate a past event",
-          "Capstone essay, 400–500 words, argumentative — self-edit with BonPatron",
-          "Compare this week's output against your Week 1 diagnostic paragraph"
+        { h: "Expression orale et écrite", badge: "production", items: [
+          "Examen oral blanc de 30 minutes (enregistré seul ou avec un partenaire) : décrire une expérience, donner une opinion, raconter un événement passé",
+          "Dissertation finale, 400 à 500 mots, argumentative — autocorrection avec BonPatron",
+          "Comparer la production de cette semaine avec le paragraphe diagnostique de la semaine 1"
         ]}
       ]
     }
   ],
   resources: [
-    ["Lawless French", "https://www.lawlessfrench.com", "Grammar reference & quizzes"],
-    ["Kwiziq French", "https://kwiziq.com", "Adaptive grammar practice"],
-    ["InnerFrench", "https://innerfrench.com", "Intermediate podcast — weekly listening spine"],
-    ["News in Slow French", "https://www.newsinslowfrench.com", "Slowed news audio"],
-    ["RFI — Journal en français facile", "https://francaisfacile.rfi.fr", "Simplified daily news"],
-    ["TV5MONDE Langue Française", "https://langue-francaise.tv5monde.com", "Francophonie culture & video"],
-    ["iTalki", "https://www.italki.com", "Paid conversation partners/tutors"],
-    ["Tandem", "https://www.tandem.net", "Free language exchange"],
-    ["BonPatron", "https://bonpatron.com", "French grammar/spell checker for writing"],
-    ["Anki", "https://apps.ankiweb.net", "Spaced-repetition vocab"],
-    ["Wikisource (français)", "https://fr.wikisource.org", "Public-domain texts — Baudelaire, Rimbaud, etc."]
+    ["Lawless French", "https://www.lawlessfrench.com", "Référence grammaticale et quiz"],
+    ["Kwiziq French", "https://kwiziq.com", "Entraînement grammatical adaptatif"],
+    ["InnerFrench", "https://innerfrench.com", "Podcast niveau intermédiaire — pilier d'écoute hebdomadaire"],
+    ["News in Slow French", "https://www.newsinslowfrench.com", "Actualités audio ralenties"],
+    ["RFI — Journal en français facile", "https://francaisfacile.rfi.fr", "Actualités quotidiennes simplifiées"],
+    ["TV5MONDE Langue Française", "https://langue-francaise.tv5monde.com", "Culture francophone et vidéos"],
+    ["iTalki", "https://www.italki.com", "Partenaires de conversation/tuteurs payants"],
+    ["Tandem", "https://www.tandem.net", "Échange linguistique gratuit"],
+    ["BonPatron", "https://bonpatron.com", "Correcteur grammatical et orthographique pour l'écriture"],
+    ["Anki", "https://apps.ankiweb.net", "Vocabulaire par répétition espacée"],
+    ["Wikisource (français)", "https://fr.wikisource.org", "Textes du domaine public — Baudelaire, Rimbaud, etc."]
   ]
 };
 
@@ -348,7 +347,7 @@ function weekProgress(wi){
 function renderNav(activeIdx){
   const nav = document.getElementById('nav');
   nav.innerHTML = '';
-  const labels = ["Overview", ...DATA.weeks.map(w=>w.title), "Resources"];
+  const labels = ["Aperçu", ...DATA.weeks.map(w=>w.title), "Ressources"];
   labels.forEach((label, idx)=>{
     const btn = document.createElement('button');
     btn.className = 'tab';
@@ -368,7 +367,7 @@ function render(activeIdx){
   if(!fbEnabled){
     const banner = document.createElement('div');
     banner.className = 'setup-banner';
-    banner.innerHTML = "Cross-device sync isn't configured yet — this device is running on local storage only. Add your Firebase config to enable sync.";
+    banner.innerHTML = "La synchronisation entre appareils n'est pas encore configurée — cet appareil fonctionne uniquement avec le stockage local. Ajoutez votre configuration Firebase pour activer la synchronisation.";
     main.appendChild(banner);
   }
 
@@ -381,7 +380,7 @@ function render(activeIdx){
       const card = document.createElement('div');
       card.className = 'overview-card';
       card.innerHTML = `<h3>${w.title} — ${w.theme}</h3>
-        <div>${done}/${total} tasks complete</div>
+        <div>${done}/${total} tâches terminées</div>
         <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>`;
       card.style.cursor = 'pointer';
       card.onclick = ()=> render(wi+1);
@@ -389,10 +388,10 @@ function render(activeIdx){
     });
     main.appendChild(grid);
     const resetWrap = document.createElement('div');
-    resetWrap.innerHTML = `<button class="reset-btn" id="resetBtn">Reset all progress</button>`;
+    resetWrap.innerHTML = `<button class="reset-btn" id="resetBtn">Réinitialiser la progression</button>`;
     main.appendChild(resetWrap);
     document.getElementById('resetBtn').onclick = ()=>{
-      if(confirm('Reset all progress?')){
+      if(confirm('Réinitialiser toute la progression ?')){
         state = {};
         localStorage.removeItem(STORAGE_KEY);
         saveRemote();
@@ -405,7 +404,7 @@ function render(activeIdx){
   if(activeIdx === DATA.weeks.length + 1){
     const div = document.createElement('div');
     div.className = 'resources';
-    div.innerHTML = '<h2 style="color:var(--accent)">Resources</h2><ul>' +
+    div.innerHTML = '<h2 style="color:var(--accent)">Ressources</h2><ul>' +
       DATA.resources.map(([name,url,desc])=>
         `<li><a href="${url}" target="_blank" style="color:var(--accent)">${name}</a> — ${desc}</li>`
       ).join('') + '</ul>';
@@ -425,7 +424,7 @@ function render(activeIdx){
 
   const progDiv = document.createElement('div');
   progDiv.className = 'week-progress';
-  progDiv.innerHTML = `${done}/${total} tasks complete <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>`;
+  progDiv.innerHTML = `${done}/${total} tâches terminées <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>`;
   main.appendChild(progDiv);
 
   week.blocks.forEach((block, bi)=>{
@@ -448,7 +447,7 @@ function render(activeIdx){
         saveRemote();
         li.classList.toggle('checked', checkbox.checked);
         const {done:d2,total:t2} = weekProgress(wi);
-        progDiv.firstChild.textContent = `${d2}/${t2} tasks complete `;
+        progDiv.firstChild.textContent = `${d2}/${t2} tâches terminées `;
         progDiv.querySelector('.progress-fill').style.width = (t2? Math.round(d2/t2*100):0)+'%';
       });
       ul.appendChild(li);
@@ -466,44 +465,24 @@ const signInBtn = document.getElementById('signInBtn');
 const signOutBtn = document.getElementById('signOutBtn');
 
 if (!fbEnabled) {
-  authStatus.textContent = "Sync not configured — progress saved on this device only";
+  authStatus.textContent = "Synchronisation non configurée — progression enregistrée uniquement sur cet appareil";
 } else {
   signInBtn.style.display = 'inline-block';
 
   signInBtn.onclick = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    authStatus.textContent = "Opening Google sign-in…";
-    auth.signInWithPopup(provider).catch(err => {
-      console.error('Popup sign-in error:', err);
-      const fallbackCodes = [
-        'auth/popup-blocked',
-        'auth/cancelled-popup-request',
-        'auth/operation-not-supported-in-this-environment'
-      ];
-      if (fallbackCodes.includes(err.code)) {
-        authStatus.textContent = "Popup blocked — redirecting to Google instead…";
-        auth.signInWithRedirect(provider).catch(err2 => {
-          console.error('Redirect sign-in error:', err2);
-          authStatus.textContent = `Sign-in failed: ${err2.code || err2.message}`;
-        });
-      } else {
-        authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
-      }
-    });
+    auth.signInWithRedirect(provider);
   };
   signOutBtn.onclick = () => auth.signOut();
 
-  auth.getRedirectResult().catch(err => {
-    console.error('Sign-in error:', err);
-    authStatus.textContent = `Sign-in failed: ${err.code || err.message}`;
-  });
+  auth.getRedirectResult().catch(err => console.error('Sign-in error:', err));
 
   auth.onAuthStateChanged(user => {
     currentUser = user;
     if (unsubscribeSnapshot) { unsubscribeSnapshot(); unsubscribeSnapshot = null; }
 
     if (user) {
-      authStatus.textContent = `Signed in as ${user.displayName || user.email} — synced across devices`;
+      authStatus.textContent = `Connecté en tant que ${user.displayName || user.email} — synchronisé entre appareils`;
       signInBtn.style.display = 'none';
       signOutBtn.style.display = 'inline-block';
 
@@ -519,7 +498,7 @@ if (!fbEnabled) {
         }
       }, err => console.error('Listen error:', err));
     } else {
-      authStatus.textContent = "Not signed in — progress saved on this device only";
+      authStatus.textContent = "Non connecté — progression enregistrée uniquement sur cet appareil";
       signInBtn.style.display = 'inline-block';
       signOutBtn.style.display = 'none';
     }
